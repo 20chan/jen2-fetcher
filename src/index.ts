@@ -122,6 +122,8 @@ async function tick() {
   for (const result of results) {
     await update(result);
   }
+
+  imap.end();
 }
 
 cron.schedule('*/1 * * * *', () => {
